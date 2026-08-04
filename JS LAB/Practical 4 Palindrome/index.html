@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card" aria-labelledby="page-title">
+        <h1 id="page-title">Palindrome Checker</h1>
+        <p class="subtitle">Enter a word or sentence and check if it reads the same backward.</p>
+
+        <form id="palindrome-form">
+          <label for="text-input">Your text</label>
+          <input id="text-input" name="text" type="text" placeholder="Type here..." autocomplete="off" />
+
+          <div class="buttons">
+            <button type="submit" class="check-btn">Check Palindrome</button>
+            <button type="button" class="clear-btn" id="clear-btn">Clear</button>
+          </div>
+
+          <div id="result" class="result" aria-live="polite"></div>
+          <div id="error" class="error" aria-live="assertive"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Palindrome Checker</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

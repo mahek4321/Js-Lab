@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Vehicle Registration Number Validator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Very simple centered box for beginner-friendly UI -->
+		<div class="card">
+			<h1>Vehicle Registration Number Validator</h1>
+
+			<!-- Input field for registration number -->
+			<label for="reg">Enter registration number:</label>
+			<input id="reg" type="text" maxlength="10" placeholder="e.g. AB12CD3456" />
+
+			<!-- Validate button -->
+			<button id="validateBtn" onclick="validateRegistration()">Validate</button>
+
+			<!-- Area to display result -->
+			<div id="result" class="result" aria-live="polite"></div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

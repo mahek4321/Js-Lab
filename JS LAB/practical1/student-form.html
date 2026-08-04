@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SIT Nagpur - Student Information Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        text-align: center;
+        color: #222;
+    }
+    header { background: #1a3c6e; color: white; padding: 25px 10px; }
+    .form-box {
+        max-width: 450px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 25px;
+        background: #1a3c6e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    button:hover { background: #14305a; }
+    #result {
+        max-width: 450px;
+        margin: 20px auto;
+        background: #eaf3ea;
+        border: 1px solid #b6d7b6;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        display: none;
+    }
+    a.back-link { display: inline-block; margin-top: 20px; color: #1a3c6e; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>SIT Nagpur</h1>
+    <p>Student Information Form</p>
+</header>
+
+<div class="form-box">
+    <form id="studentForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="prn">PRN</label>
+        <input type="text" id="prn" required>
+
+        <label for="department">Department</label>
+        <input type="text" id="department" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <!-- Inline JavaScript -->
+        <button type="submit" onclick="console.log('Form submit clicked (inline JS log)')">
+            Submit
+        </button>
+    </form>
+</div>
+
+<div id="result"></div>
+
+<div style="text-align:center;">
+    <a class="back-link" href="index.html">&larr; Back to Home</a>
+</div>
+
+<!-- Internal JavaScript -->
+<script>
+    document.getElementById('studentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const prn = document.getElementById('prn').value;
+        const department = document.getElementById('department').value;
+        const email = document.getElementById('email').value;
+
+        // calls function from external script.js
+        displayStudentInfo(name, prn, department, email);
+    });
+</script>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

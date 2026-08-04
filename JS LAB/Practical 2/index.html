@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Shopping & Bill Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🛒 Online Shopping</h1>
+      <p class="subtitle">Add items to cart and generate GST (18%) bill</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2 class="panel-title">🧺 Products</h2>
+
+        <div class="products" id="products">
+          <!-- Product cards render by JS -->
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel-title">🧾 Cart</h2>
+
+        <label class="field-label" for="name">Customer Name</label>
+        <input type="text" id="name" placeholder="Enter Customer Name" class="input" />
+
+        <label class="field-label" for="phone">Phone Number</label>
+        <input type="tel" inputmode="numeric" id="phone" placeholder="Enter 10-digit phone number" class="input" />
+
+
+        <div class="cart-table-wrap">
+          <table class="cart-table" aria-label="Cart Items">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th class="right">Price</th>
+                <th class="right">Qty</th>
+                <th class="right">Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartBody">
+              <tr><td colspan="5" class="empty">Cart is empty. Add products →</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0.00</span></div>
+          <div class="summary-row"><span>GST (18%)</span><span id="gstAmount">₹0.00</span></div>
+          <div class="summary-row total-row"><span>Total</span><span id="total">₹0.00</span></div>
+        </div>
+
+        <div class="actions">
+          <button class="primary" id="generateBtn" onclick="calculateBill()">Generate Bill</button>
+          <button class="secondary" onclick="clearCart()">Clear Cart</button>
+        </div>
+
+        <div id="output" class="output"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Built with HTML5 semantic tags, CSS and JavaScript bill calculation.</small>
+    </footer>
+  </div>
+
+  <script src="practical2.js"></script>
+</body>
+</html>
