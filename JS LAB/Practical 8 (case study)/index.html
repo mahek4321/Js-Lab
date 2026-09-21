@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gym Admission</title>
+        <style>
+            body{
+                font-family:Arial sans-serif;
+                background:#f2f2f2;
+            }
+            .container{
+                width:400px;
+                margin:40px auto;
+                padding:20px;
+                background:white;
+                border-radius:10px;
+                box-shadow:0 0 10px gray;
+      0      }
+            h2{
+                text-align:center;
+            }   
+            
+            label{
+                display:block;
+                margin-top:10px;
+
+            }
+            input,select{
+                width:100%;
+                padding:8px;
+                margin-top:5px;
+
+            }
+            .error{
+                color:red;
+                font-size:13px;
+
+            }
+            .success{
+                color:green;
+                font-size:14px;
+                text-align:center;
+
+
+            }
+            button{
+                width:100%;
+                padding:10px;
+                margin-top:15px;
+                background:green;
+                color:white;
+                border:none;
+                    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Gym Admission Form</h2>
+
+            <form id = "gymForm">
+
+                <label>Full Name</label>
+                <input type = "text" id ="name">
+                <snap id = "nameError" class="error"></snap>
+
+                <label>Age</label>
+                <input type = "number" id ="age">
+                <span id="ageError" class="error"></span>
+
+                <label>Email</label>
+                <input type="email" id ="email">
+                <span id="emailError" class ="error"></span>
+                
+                <label>Mobile Number</label>
+                <input type = "text" id ="mobile">
+                <span id ="mobileError" class = "error"></span>
+
+                <label>Membership Plan</label>
+                <select id="plan">
+                    <option value="">Select Plan</option>
+                    <option>Monthly</option>
+                    <option>Quaterly</option>
+                    <option>Yearly</option>
+                </select>
+                <span id="planError" class="error"></span>
+
+                <button type = "submit">Submit</button>
+
+                <p id = "result" class = "success"></p>
+            </form>
+        </div>
+
+        <script>
+            //Name Validation(input event)
+            document.getElementById("name").addEventListener("input", function()){
+                let name = this.value;
+                if(/^[A-Za-z ]+$/.test(name)){
+                    document.getElementById("nameError").innerHTML="";
+
+                }else{
+                    document.getElementById("nameError").innerHTML="Only letters allowed.";
+                
+            }
+        });
+
+        //Age Validation(input event)
+        document.getElementById("age").addEventListener("input", function()){
+                let age = this.value;
+                if(age >= 16 && age <= 60){
+                    document.getElementById("ageError").innerHTML="";
+                }else{
+                    document.getElementById("ageError").innerHTML="Age must be between 18 and 65.";
+                }
+        });
+
+        
+        
+            
+        
+        </script>
+    </body>
+</html>

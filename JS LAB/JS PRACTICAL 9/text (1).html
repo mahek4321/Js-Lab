@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Seminar Schedule Planner</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            width: 750px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #dbeafe;
+        }
+
+        .schedule {
+            cursor: pointer;
+        }
+
+        .schedule:hover {
+            background-color: #ccfbf1;
+        }
+
+        .begin {
+            background-color: #e8f5e9;
+        }
+
+        .end {
+            background-color: #e3f2fd;
+        }
+
+        #saved {
+            margin-top: 20px;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            border: none;
+            background-color: #0f766e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #115e59;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <h2>Seminar Schedule Planner</h2>
+
+
+    <table id="scheduleTable">
+
+        <tr>
+
+            <th rowspan="2">Day</th>
+
+            <th colspan="2">
+                Schedule
+            </th>
+
+            <th rowspan="2">Topic</th>
+
+        </tr>
+
+
+        <tr>
+
+            <th>Begin</th>
+
+            <th>End</th>
+
+        </tr>
+
+
+        <!-- Monday -->
+
+        <tr class="schedule"
+            data-info="Monday - Introduction to XML">
+
+            <td rowspan="2">
+                Monday
+            </td>
+
+            <td class="begin"
+                rowspan="2">
+                8:00 a.m.
+            </td>
+
+            <td class="end"
+                rowspan="2">
+                5:00 p.m.
+            </td>
+
+            <td>
+                Introduction to XML
+            </td>
+
+        </tr>
+
+
+        <tr class="schedule"
+            data-info="Monday - Validity: DTD and Relax NG">
+
+            <td>
+                Validity: DTD and Relax NG
+            </td>
+
+        </tr>
+
+
+        <!-- Tuesday -->
+
+        <tr class="schedule"
+            data-info="Tuesday - XPath">
+
+            <td rowspan="3">
+                Tuesday
+            </td>
+
+            <td class="begin">
+                8:00 a.m.
+            </td>
+
+            <td class="end">
+                11:00 a.m.
+            </td>
+
+            <td>
+                XPath
+            </td>
+
+        </tr>
+
+
+        <tr class="schedule"
+            data-info="Tuesday - XSL Transformations">
+
+            <td class="begin">
+                11:00 a.m.
+            </td>
+
+            <td class="end">
+                2:00 p.m.
+            </td>
+
+            <td>
+                XSL Transformations
+            </td>
+
+        </tr>
+
+
+        <tr class="schedule"
+            data-info="Tuesday - XSL Formatting Objects">
+
+            <td class="begin">
+                2:00 p.m.
+            </td>
+
+            <td class="end">
+                5:00 p.m.
+            </td>
+
+            <td>
+                XSL Formatting Objects
+            </td>
+
+        </tr>
+
+
+        <!-- Wednesday -->
+
+        <tr class="schedule"
+            data-info="Wednesday - XSL Formatting Objects">
+
+            <td>
+                Wednesday
+            </td>
+
+            <td class="begin">
+                8:00 a.m.
+            </td>
+
+            <td class="end">
+                12:00 p.m.
+            </td>
+
+            <td>
+                XSL Formatting Objects
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <div id="saved"></div>
+
+
+    <button id="clearBtn">
+        Clear Saved Preferences
+    </button>
+
+
+</div>
+
+
+<script src="script (2).js"></script>
+
+</body>
+
+</html>
