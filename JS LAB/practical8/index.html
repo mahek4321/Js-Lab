@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+        <div class="form-card">
+
+            <div class="top-bar">
+                <div class="brand">
+                    <div class="brand-mark">G</div>
+                    <div>
+                        <h2>GYMZONE</h2>
+                        <span>MEMBERSHIP</span>
+                    </div>
+                </div>
+
+                <div class="step">01 / 01</div>
+            </div>
+
+            <div class="intro">
+                <p class="small-title">NEW MEMBER REGISTRATION</p>
+                <h1>Gym Admission Form</h1>
+                <p>Enter your details below to register for a membership.</p>
+            </div>
+
+            <form id="gymForm">
+
+                <div class="section-title">
+                    <span>01</span>
+                    Personal Details
+                </div>
+
+                <div class="row">
+
+                    <div class="field">
+                        <label for="name">Full Name</label>
+
+                        <div class="input-box">
+                            <span class="icon">⌁</span>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter full name"
+                            >
+                        </div>
+
+                        <small id="nameError" class="message"></small>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="age">Age</label>
+
+                        <div class="input-box">
+                            <span class="icon">#</span>
+                            <input
+                                type="number"
+                                id="age"
+                                placeholder="16 - 60"
+                            >
+                        </div>
+
+                        <small id="ageError" class="message"></small>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+
+                    <div class="input-box">
+                        <span class="icon">@</span>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                        >
+                    </div>
+
+                    <small id="emailError" class="message"></small>
+                </div>
+
+
+                <div class="field">
+                    <label for="mobile">Mobile Number</label>
+
+                    <div class="input-box">
+                        <span class="icon">☎</span>
+                        <input
+                            type="text"
+                            id="mobile"
+                            maxlength="10"
+                            inputmode="numeric"
+                            placeholder="10-digit mobile number"
+                        >
+                    </div>
+
+                    <small id="mobileError" class="message"></small>
+                </div>
+
+
+                <div class="section-title plan-heading">
+                    <span>02</span>
+                    Membership Details
+                </div>
+
+
+                <div class="field">
+                    <label for="plan">Membership Plan</label>
+
+                    <div class="input-box select-box">
+                        <span class="icon">◆</span>
+
+                        <select id="plan">
+                            <option value="">Select a membership plan</option>
+                            <option value="Monthly">Monthly — ₹1,000</option>
+                            <option value="Quarterly">Quarterly — ₹2,700</option>
+                            <option value="Yearly">Yearly — ₹9,000</option>
+                        </select>
+                    </div>
+
+                    <small id="planError" class="message"></small>
+                </div>
+
+
+                <div class="field">
+                    <label for="address">Address</label>
+
+                    <div class="input-box textarea-box">
+                        <span class="icon">⌂</span>
+
+                        <textarea
+                            id="address"
+                            rows="3"
+                            placeholder="Enter your address"
+                        ></textarea>
+                    </div>
+
+                    <small id="addressError" class="message"></small>
+                </div>
+
+
+                <div class="bottom">
+
+                    <p>
+                        <span>*</span> All fields are required.
+                    </p>
+
+                    <div class="buttons">
+
+                        <button
+                            type="reset"
+                            class="reset-btn"
+                        >
+                            Clear
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                        >
+                            Submit Admission
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    aria-live="polite"
+                ></div>
+
+            </form>
+        </div>
+
+        <p class="footer">
+            JavaScript Lab • Practical 8 • Event Based Form Validation
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
