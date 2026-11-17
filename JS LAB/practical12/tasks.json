@@ -1,0 +1,12 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Revise JavaScript arrays",
+    "done": false
+  },
+  {
+    "id": "sample-2",
+    "title": "Practice DOM events",
+    "done": false
+  }
+]
